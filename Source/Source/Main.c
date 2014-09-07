@@ -1,9 +1,12 @@
 #include <shinobi.h>
 #include <kamui2.h>
-#include <sn_fcntl.h>
-#include <usrsnasm.h>
 #include <sg_syCbl.h>
 #include <sg_Chain.h>
+
+#if defined DEBUG
+#include <sn_fcntl.h>
+#include <usrsnasm.h>
+#endif
 
 extern Uint8 *_BSG_END;
 #define P1AREA 0x80000000
@@ -221,10 +224,12 @@ int main( void )
  * Returns: None */
 void DebugOut( const char *p_pString )
 {
+#if defined DEBUG
 	if( p_pString != NULL )
 	{
 		debug_write( SNASM_STDOUT, p_pString, strlen( p_pString ) );
 	}
+#endif
 }
 
 /* Create a pointer to a 32-byte aligned address

@@ -107,6 +107,7 @@ debug: CDEBUG = -debug
 debug: TARGET := $(TARGET)D
 debug: DEFAULT_LIBS += libcross sh4nlfzn
 debug: OPTIMISE = 0
+debug: CDEFS += DEBUG
 debug: $(TARGET)
 
 release: BUILD = Release
