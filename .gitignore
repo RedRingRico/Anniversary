@@ -31,6 +31,12 @@ Data
 *.pch
 local.properties
 
+# Debugging temporary directory#
+Codescape
+
+# GD-ROM workshop #
+Workshop
+
 # Temporary Vim #
 *.swp
 *.swo
